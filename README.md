@@ -30,14 +30,14 @@ git clone https://github.com/emiridbest/PlanqSafe.git
 
 Install dependencies:
 
-bash
+    bash
 
 cd PlanqSafe
 npm install
 
 Run the application:
 
-bash
+    bash
 
     npm start
 

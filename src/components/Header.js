@@ -19,7 +19,6 @@ const Header = () => {
             <li className="cursor-pointer hover:text-green-500">Flex </li>
 
             <li className="cursor-pointer hover:text-green-500">Savings </li>
-            <li className="cursor-pointer hover:text-green-500">Achievements </li>
 
             <li className="cursor-pointer hover:text-green-500">
               Budget Calculator{" "}

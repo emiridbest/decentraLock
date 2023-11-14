@@ -19,7 +19,7 @@ export default function Home() {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
-  
+
       setAccount(accounts[0]);
       setConnected(true);
     } catch (error) {
@@ -27,13 +27,12 @@ export default function Home() {
       // Handle errors or display a message to the user
     }
   }
-  
 
   async function disconnectWallet() {
     try {
       // You might want to add some disconnect logic here
       setConnected(false); // Update isConnected state when disconnected
-      setAccount()
+      setAccount();
     } catch (error) {
       console.error(error);
     }
@@ -97,15 +96,13 @@ export default function Home() {
       if (!account || !contract || !isConnected) {
         console.error("Account or contract not available");
         return;
-      }
-      else if(account || contract || isConnected) {
-      console.log("Connected account:", account);
+      } else if (account || contract || isConnected) {
+        console.log("Connected account:", account);
 
-      const withdrawalResult = await contract.methods
-        .withdraw()
-        .send({ from: account[0], gas:2000000 }); // Make sure to provide the "from" address
-      }
-      else if (withdrawalResult.status === true) {
+        const withdrawalResult = await contract.methods
+          .withdraw()
+          .send({ from: account[0], gas: 2000000 }); // Make sure to provide the "from" address
+      } else if (withdrawalResult.status === true) {
         console.log("Withdrawal successful");
         console.log(withdrawalResult);
         getBalance();
@@ -116,7 +113,7 @@ export default function Home() {
       console.error("Error during withdrawal:", error);
     }
   }
-  
+
   useEffect(() => {
     if (window.ethereum) {
       // MetaMask is installed
@@ -126,19 +123,18 @@ export default function Home() {
       console.error("MetaMask not detected");
     }
   }, []);
-  
+
   return (
     <main className={`flex min-h-screen flex-col p-5 ${inter.className}`}>
       <Header />
-      <section className="flex items-center text-2xl">
-  <p>
-    Welcome to PlanqSafe, where we're revolutionizing financial well-being!
-    PlanqSafe embraces the concept of 
-    community.
-
-   
-  </p>
-</section>
+      <div className="flex flex-col items-center text-1xl">
+        <p>
+          Welcome to PlanqSafe, where we're revolutionizing financial
+          well-being!
+          <br />
+          PlanqSafe embraces the concept of community.
+        </p>
+      </div>
 
       <div className="flex justify-center items-center p-10">
         {isConnected && account ? (
@@ -159,36 +155,39 @@ export default function Home() {
           </button>
         )}
       </div>
-  
+
       <p className="flex flex-col items-center justify-between mt-6 text-lg text-gray-600">
         Your Planq Balance: {planqBalance.toFixed(2)} PLANQ
       </p>
-  <div className="flex flex-col items-center justify-between">
-      <form onSubmit={handleDeposit} className="mt-8 flex flex-col items-center">
-        <input
-          type="number"
-          step="0.01"
-          value={depositAmount}
-          onChange={(e) => setDepositAmount(e.target.value)}
-          placeholder="Enter deposit amount"
-          className="w-full text-black bg-gray-100 border  border-gray-300 rounded-md p-3 mb-4 focus:outline-none focus:border-blue-500"
-        />
-        <button
-          type="submit"
-          className="mt-9 bg-blue-500 text-white py-2 px-6 rounded-full focus:outline-none hover:bg-blue-600 transition duration-300"
+      <div className="flex flex-col items-center justify-between">
+        <form
+          onSubmit={handleDeposit}
+          className="mt-8 flex flex-col items-center"
         >
-          Deposit
+          <input
+            type="number"
+            step="0.01"
+            value={depositAmount}
+            onChange={(e) => setDepositAmount(e.target.value)}
+            placeholder="Enter deposit amount"
+            className="w-full text-black bg-gray-100 border  border-gray-300 rounded-md p-3 mb-4 focus:outline-none focus:border-blue-500"
+          />
+          <button
+            type="submit"
+            className="mt-9 bg-green-500 text-white py-2 px-6 rounded-full focus:outline-none hover:bg-blue-600 transition duration-300"
+          >
+            Deposit
+          </button>
+        </form>
+
+        <button
+          onClick={handleWithdraw}
+          className="mt-9 bg-green-500 text-white py-2 px-6 rounded-full focus:outline-none hover:bg-red-600 transition duration-300"
+        >
+          Withdraw
         </button>
-      </form>
-  
-      <button
-        onClick={handleWithdraw}
-        className="mt-9 bg-red-500 text-white py-2 px-6 rounded-full focus:outline-none hover:bg-red-600 transition duration-300"
-      >
-        Withdraw
-      </button>
-  </div>
+      </div>
       <Footer />
     </main>
   );
-        }  
+}
