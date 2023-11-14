@@ -1,39 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Introduction
 
-## Getting Started
+Welcome to PlanqSafe, your decentralized piggy bank built on the Planq blockchain! PlanqSafe provides a secure and transparent way to manage your savings using smart contracts. Utilizing the Planq blockchain, PlanqSafe ensures fast transactions, low fees, and a decentralized environment for managing your funds.
+Features
 
-First, run the development server:
+    Decentralized Savings: PlanqSafe operates on the Planq blockchain, ensuring decentralization and security for your savings.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+    Transparent Transactions: All transactions made through PlanqSafe are recorded on the Planq blockchain, providing a transparent and immutable ledger for your deposits and withdrawals.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Smart Contract Security: PlanqSafe utilizes smart contracts, ensuring that your funds are securely managed according to predefined rules without the need for intermediaries.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+    Fast Transactions on Planq Blockchain: PlanqSafe leverages the features of the Planq blockchain, including fast transaction speeds and low fees.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Getting Started
+Prerequisites
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Before using PlanqSafe, make sure you have the following:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    Planq Wallet: Install a Planq-compatible wallet to interact with PlanqSafe.
 
-## Learn More
+Installation
 
-To learn more about Next.js, take a look at the following resources:
+To get started with PlanqSafe, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Clone the PlanqSafe repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    bash
 
-## Deploy on Vercel
+git clone https://github.com/emiridbest/PlanqSafe.git
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# planqSafe
+bash
+
+cd PlanqSafe
+npm install
+
+Run the application:
+
+bash
+
+    npm start
+
+Usage
+
+    Connect your Planq wallet to the PlanqSafe application.
+
+    Deposit funds into your PlanqSafe smart contract.
+
+    Monitor your Planq balance and track your savings over time.
+
+    Withdraw funds when needed, following the smart contract rules.
+
+Contributions
+
+We welcome contributions from the community! Feel free to open issues, submit pull requests, or suggest new features. Together, let's make PlanqSafe the go-to decentralized piggy bank on the Planq blockchain.
+License
+
+This project is licensed under the MIT License.
+Acknowledgments
+
+    Special thanks to the Planq blockchain community for their support and contributions.
+
+Happy saving with PlanqSafe! 🐷💰
