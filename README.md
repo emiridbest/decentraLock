@@ -1,3 +1,9 @@
+EVM Explorer Link: http://167.86.99.150:4000/address/0x291E6C4A1a834E9EC4bD33fFDB2e7c90680aBd5E
+
+    Contract Address: 0x291e6c4a1a834e9ec4bd33ffdb2e7c90680abd5e
+
+
+
 Introduction
 
 Welcome to PlanqSafe, your decentralized piggy bank built on the Planq blockchain! PlanqSafe provides a secure and transparent way to manage your savings using smart contracts. Utilizing the Planq blockchain, PlanqSafe ensures fast transactions, low fees, and a decentralized environment for managing your funds.
@@ -30,14 +36,14 @@ git clone https://github.com/emiridbest/PlanqSafe.git
 
 Install dependencies:
 
-    bash
+bash
 
 cd PlanqSafe
 npm install
 
 Run the application:
 
-    bash
+bash
 
     npm start
 
