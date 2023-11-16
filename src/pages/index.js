@@ -22,6 +22,7 @@ export default function Home() {
 
       setAccount(accounts[0]);
       setConnected(true);
+      getBalance();
     } catch (error) {
       console.error("Failed to connect to MetaMask:", error);
       // Handle errors or display a message to the user
