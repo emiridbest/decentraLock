@@ -129,7 +129,7 @@ export default function Home() {
       <Header />
       <div className="flex flex-col items-center text-1xl">
         <p>
-          Welcome to PlanqSafe, where we're revolutionizing financial
+          Welcome to PlanqSafe, where we are revolutionizing financial
           well-being!
           <br />
           PlanqSafe embraces the concept of community.
