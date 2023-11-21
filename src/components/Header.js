@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Header = () => {
   return (
     <header className="">
       <div className="flex flex-wrap items-center justify-between">
         <div className="flex text-2xl p-10 font-bold text-green-500 shrink-0">
-          Planq Safe
+          DecentraLock
         </div>
         <nav className="order-3 w-full px-10 sm:order-2 sm:w-auto mt-4 sm:mt-0">
           <ul className="flex flex-wrap text-white gap-5 pl-10 justify-center space-x-1 sm:space-x-6 text-black">

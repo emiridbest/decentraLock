@@ -15,6 +15,8 @@ export default function Home() {
   const [isConnected, setConnected] = useState(false);
 
   async function connectToWallet() {
+    console.log("getting balance");
+
     try {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
@@ -22,7 +24,6 @@ export default function Home() {
 
       setAccount(accounts[0]);
       setConnected(true);
-      getBalance();
     } catch (error) {
       console.error("Failed to connect to MetaMask:", error);
       // Handle errors or display a message to the user
@@ -44,7 +45,7 @@ export default function Home() {
       if (!window.ethereum) throw new Error("Wallet extension not detected");
 
       window.ethereum.request({ method: "eth_requestAccounts" });
-      const account = window.ethereum.request({
+      const account = window.ethereum.requestAccounts({
         method: "eth_requestAccounts",
       });
       const web3Provider = new Web3(window.ethereum);
@@ -56,7 +57,7 @@ export default function Home() {
       setContract(contract);
       setAccount(account[0]);
     }
-  }, []);
+  }, [account, contract]);
 
   const getBalance = useCallback(async () => {
     if (!window.ethereum) throw new Error("Celo wallet extension not detected");
@@ -130,10 +131,10 @@ export default function Home() {
       <Header />
       <div className="flex flex-col items-center text-1xl">
         <p>
-          Welcome to PlanqSafe, where we are revolutionizing financial
+          Welcome to DecentraLock, where we are revolutionizing financial
           well-being!
           <br />
-          PlanqSafe embraces the concept of community.
+          DecentraLock embraces the concept of community.
         </p>
       </div>
 
