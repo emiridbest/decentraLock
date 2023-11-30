@@ -27,8 +27,7 @@ const Footer = () => {
           >
             Subscribe
           </button>
-        </div>
-        <p className="text-gray-400">© {new Date().getFullYear()} Planq Safe, Inc.</p>
+        </div>DecentraLock, Inc.
       </div>
     </footer>
   );
