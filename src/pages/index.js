@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const [contract, setContract] = useState(null);
-  const [planqBalance, setPlanqBalance] = useState(0);
+  const [taraxaBalance, setTaraxaBalance] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
   const [account, setAccount] = useState(null);
   const [provider, setProvider] = useState(null);
@@ -63,9 +63,9 @@ export default function Home() {
     if (!window.ethereum) throw new Error("Celo wallet extension not detected");
 
     setAccount(account);
-    const planqBalance = await contract.methods.getBalance(account).call(); // Use contract.methods
-    setPlanqBalance(
-      parseFloat(Web3.utils.fromWei(planqBalance.toString(), "ether"))
+    const taraxaBalance = await contract.methods.getBalance(account).call(); // Use contract.methods
+    setTaraxaBalance(
+      parseFloat(Web3.utils.fromWei(taraxaBalance.toString(), "ether"))
     ); // Use Web3.utils
   }, [account, contract]);
 
@@ -159,7 +159,7 @@ export default function Home() {
       </div>
 
       <p className="flex flex-col items-center justify-between mt-6 text-lg text-gray-600">
-        Your Planq Balance: {taraxaBalance.toFixed(2)} TARAXA
+        Your Taraxa Balance: {taraxaBalance.toFixed(2)} TARAXA
       </p>
       <div className="flex flex-col items-center justify-between">
         <form
