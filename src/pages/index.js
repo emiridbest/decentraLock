@@ -45,7 +45,7 @@ export default function Home() {
       if (!window.ethereum) throw new Error("Wallet extension not detected");
 
       window.ethereum.request({ method: "eth_requestAccounts" });
-      const account = window.ethereum.requestAccounts({
+      const account = window.ethereum.enable({
         method: "eth_requestAccounts",
       });
       const web3Provider = new Web3(window.ethereum);
