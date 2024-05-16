@@ -159,7 +159,7 @@ export default function Home() {
       </div>
 
       <p className="flex flex-col items-center justify-between mt-6 text-lg text-gray-600">
-        Your Planq Balance: {planqBalance.toFixed(2)} PLANQ
+        Your Planq Balance: {taraxaBalance.toFixed(2)} TARAXA
       </p>
       <div className="flex flex-col items-center justify-between">
         <form
